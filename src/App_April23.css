@@ -1,0 +1,343 @@
+
+/* * {
+  border: 1px solid red !important;
+} */
+Container centers everything
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100hv;
+}
+
+/* LEFT: RUN + CRP buttons stacked */
+.left-buttons {
+  position: absolute;
+  right: calc(50% + 190px); /* 110px to the left of the center */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* RIGHT: Ctrl button */
+.right-button {
+  position: absolute;
+  left: calc(50% + 170px); /* 110px to the right of center */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Common button style */
+.side-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Image display box */
+.box {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #1C1C1C; /* White in hex */
+  border-radius: 12px; /* You can tweak this value */
+  padding: 0px;
+  display: inline-block;
+}
+
+/* Image style */
+.box-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Progress bar */
+.progress-bar-container {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 10px;
+  background-color: black;
+  gap: 1px;
+}
+
+.progress-bar-segment {
+  flex: 1;
+}
+
+/* Count-up label */
+.countup-label {
+  position: absolute;
+  left: 15px;
+  top: 35px;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.side-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.side-image {
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Current footage label */
+.current-footage-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px; /* Large font size */
+  font-weight: bold; /* Bold font */
+  color: gray; /* Gray color */
+  z-index: 10;
+  font-family: sans-serif;
+}
+
+/* Countdown label */
+.countdown-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 92px; /* Large font */
+  font-family: sans-serif;
+  color: darkgray;
+  z-index: 10;
+  font-weight: bold; /* Bold font */
+}
+
+/* Default Countdown Style */
+.default-countdown {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* General styles for countdown */
+.countdown-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* C State Specific Countdown Styles */
+.c-state-countdown-1 {
+  font-size: 62px; /* Font size for C1 */
+  top: 50px; /* Position for C1 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.c-state-countdown-2 {
+  font-size: 24px; /* Font size for C2 */
+  top: 42px; /* Position for C2 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.c-state-countdown-3 {
+  font-size: 24px; /* Font size for C3 */
+  top: 42px; /* Position for C3 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.c-state-countdown-4 {
+  font-size: 24px; /* Font size for C4 */
+  top: 32px; /* Position for C4 */
+  left: 60px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+/* S State Specific Countdown Styles */
+.s-state-countdown-1 {
+  font-size: 62px; /* Font size for S1 */
+  top: 50px; /* Position for S1 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.s-state-countdown-2 {
+  font-size: 24px; /* Font size for S2 */
+  top: 42px; /* Position for S2 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.s-state-countdown-3 {
+  font-size: 24px; /* Font size for S3 */
+  top: 42px; /* Position for S3 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.s-state-countdown-4 {
+  font-size: 24px; /* Font size for S4 */
+  top: 32px; /* Position for S4 */
+  left: 52px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+/* E State Specific Countdown Styles */
+.e-state-countdown-1 {
+  font-size: 62px; /* Font size for E1 */
+  top: 50px; /* Position for E1 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.e-state-countdown-2 {
+  font-size: 24px; /* Font size for E2 */
+  top: 42px;       /* Position for E2 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.e-state-countdown-3 {
+  font-size: 24px; /* Font size for E3 */
+  top: 42px;       /* Position for E3 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.e-state-countdown-4 {
+  font-size: 24px; /* Font size for E4 */
+  top: 32px;       /* Position for E4 */
+  left: 52px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+/* R State Countdown Label */
+.r-countdown-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  color: darkgray;
+  z-index: 10;
+}
+
+.r-countdown-label {
+  font-size: 24px; /* Font size for C1 */
+  top: 20px; /* Position for C1 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+/* R State Specific Countdown Styles */
+.r-countdown-label.s1 {
+  font-size: 62px; /* Font size for S1 */
+  top: 86px; /* Position for S1 */
+  left: 90px;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.r-countdown-label.s2 {
+  font-size: 24px; /* Font size for S2 */
+  top: 56px; /* Position for S2 */
+  left: 90px;
+}
+
+.r-countdown-label.s3 {
+  font-size: 24px; /* Font size for S3 */
+  top: 56px; /* Position for S2 */
+  left: 90px;
+}
+
+.r-countdown-label.s4 {
+  font-size: 24px; /* Font size for S4 */
+  top: 44px; /* Position for S4 */
+  left: 50px;
+  color: gray;
+  font-family: sans-serif;
+}
+#CTRLBtn {
+  background-color: gray; /* Set button background color */
+  color: black; /* Text color */
+  padding: 15px; /* Add spacing */
+  border: none; /* Remove default border */
+  border-radius: 50px; /* Add rounded corners */
+  cursor: pointer; /* Show pointer on hover */
+}
+
+#CTRLBtn:hover {
+  background-color: darkgray; /* Darker shade when hovered */
+}
+
+.debug-status-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-75%, 180%);
+  background: lightyellow;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fps-input-position {
+  position: absolute; /* Absolute positioning */
+  bottom: 20px; /* Distance from the bottom of the parent container */
+  left: 50%; /* Position it 50% from the left side */
+  transform: translateX(-50%); /* Offset by 50% of its own width to center it */
+  width: 200px; /* Adjust width as needed */
+  text-align: center; /* Center the text inside the input */
+}
+.fps-input-container label,
+.fps-input-container input {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: end; /* Right-justify contents */
+  align-items: end;
+  gap: 0px; /* Space between label and input */
+   font-family: Arial, Helvetica, sans-serif;
+  text-align: right; /* Right-aligns the text inside the input box */
+}
+
+.fps-input-container input::placeholder {
+  color: #cccccc; /* Optional: makes the placeholder a light grey */
+}

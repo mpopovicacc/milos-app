@@ -1,0 +1,23 @@
+/* Set the background to dark gray with the carbon fibre image tiled */
+body {
+  background-color: #333; 
+  background-image: url('/carbon-fibre-big.png');
+  background-repeat: repeat; 
+  margin: 0;
+  height: 10vh;
+  /*background-size: 200px 200px;  Explicitly setting tile size */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the screen */
+}
+
+.black-box {
+  width: 240px;
+  height: 240px;
+  background-color: black;
+  border: 1px solid #000; /* 1px border */
+}
